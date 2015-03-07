@@ -1,0 +1,30 @@
+<template name="layout">
+	<core-scaffold id="core_scaffold" layout center-justified>
+        <core-header-panel navigation="" flex="">
+	      <core-toolbar id="navheader" class="tall" style="background-image: url({{imagenPerfil}}); background-position: center;">
+	        <div class="middle avatar maroon" ></div>
+	          <div class="bottom uuid" style="color: white;" center-justified>{{currentUser.profile.name}}</div>
+	      </core-toolbar>
+
+	      <section layout="" vertical="" id="onlineList">
+	        <core-item id="inicio" icon="star" label="inicio" horizontal center layout><a href="/"></a></core-item>
+
+	          <core-item id="misRutas" icon="account-box" label="Mis Rutas" horizontal center layout><a href="/"></a></core-item>
+	          
+	          <core-item label="Busca una Ruta" icon="star" id="buscar" horizontal center layout><a href="/"></a></core-item>
+	          
+	          {{#if currentUser}}
+	            <core-item label="salir" id="logout" onClick="Meteor.logout()" icon="account-child" horizontal layout center><a href="#"></a></core-item>
+	          {{else}}
+	            <core-item label="Loguearte" icon="account-child" horizontal layout center><a href="/login"></a></core-item>
+	          {{/if}}      
+	      </section>
+	    </core-header-panel>
+
+        <div class="content" horizontal wrap center-justified layout> 
+          {{#momentum plugin='right-to-left' }}
+            {{> yield}}
+          {{/momentum}}
+        </div>
+    </core-scaffold>
+</template>

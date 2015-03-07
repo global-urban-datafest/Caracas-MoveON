@@ -1,0 +1,11 @@
+<template name="main">
+	     <core-card id="cardMain" layout vertical>
+				<img src="/saludo.png" id="imgSaludo">
+				<div class="content" style="text-align: center;">
+					<h4>Hola {{currentUser.profile.name}} ¿Qué deseas hacer?</h4>
+					<div horizontal center-justified>
+						<paper-button raised id="buttonMain" onClick="Router.go('/rutas');">Ver Rutas</paper-button>
+					</div>
+				</div>
+	     </core-card>
+</template>

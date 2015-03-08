@@ -1,6 +1,6 @@
 Template.login.events({
 
-    'submit #login-form' : function(e){
+    'click #login' : function(e){
       e.preventDefault();
       // retrieve the input field values
       var email = $('#email').val()

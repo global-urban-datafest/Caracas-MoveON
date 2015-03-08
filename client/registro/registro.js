@@ -1,5 +1,5 @@
 Template.registro.events({
-	"submit #registro-form": function(){
+	"click #registro": function(){
 
         var trimInput = function(val) {
             return val.replace(/^\s*|\s*$/g, "");

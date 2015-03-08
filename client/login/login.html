@@ -1,3 +1,12 @@
 <template name="login">
-	{{> atForm state="signIn"}}
+	<div class="container">
+		<h2 class="header ">Logueate Ya!</h2>
+		<form class="form-group" id="login-form">
+			<input id="email" class="form-control" type="email" placeholder="Digita tu email">
+			<br>
+			<input id="password" type="password" class="form-control" placeholder="Contraseña">
+
+			<input type="submit" class="btn btn-primary" value="Entrar">
+		  </form>
+	</div>
 </template>

@@ -1,36 +1,28 @@
 Meteor.startup(function(){
 
-	if(Rutas.find().count <= 0){
+	if(Rutas.find().count() <= 0){
 		Rutas.insert({
-			rutaID: "011-1",
-			origen: "TRAPICHITO",
+			rutaID: "Desde mi casa hasta el Terminal",
+			origen: "PETARE",
 			destino: "MIRANDA",
-			horaInicio: "05:30 AM",
-			horaCierre: "10:00 PM"
 		});
 
 		Rutas.insert({
-			rutaID: "011-2",
-			origen: "GUATIRE",
-			destino: "MIRANDA",
-			horaInicio: "05:30 AM",
-			horaCierre: "10:00PM"
+			rutaID: "Desde Parque Miranda hasta Wayra",
+			origen: "MIRANDA",
+			destino: "ALTAMIRA",
 		});
 
 		Rutas.insert({
-			rutaID: "661",
-			origen: "SAN AGUSTÍN",
-			destino: "NUEVO CIRCO",
-			horaInicio: "05:30 AM",
-			horaCierre: "11:00 PM"
+			rutaID: "Desde Wayra a Casa de mis Padres",
+			origen: "ALTAMIRA",
+			destino: "CHACAO",
 		});
 
 		Rutas.insert({
-			rutaID: "921",
-			origen: "STA. MONICA",
-			destino: "CIUDAD UNIVERSITARIA",
-			horaInicio: "05:30 AM",
-			horaCierre: "10:30 PM"
+			rutaID: "Desde casa de mis padres hasta mi casa",
+			origen: "CHACAO",
+			destino: "PETARE",
 		});
 	}
 });

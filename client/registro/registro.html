@@ -1,3 +1,21 @@
 <template name="registro">
-	{{> atForm state='signUp'}}
+	<div class="container">
+		<h2 class="header ">Registrate Ya!</h2>
+		
+		<form class="form-group" id="registro-form">
+		    <input id="first_name" placeholder="nombre" type="text" class="validate form-control"><br>
+
+		    <input id="last_name" type="text" class="validate form-control" placeholder="Apellido"><br>
+
+	        <input id="username" type="text" class="validate form-control" placeholder="Nombre de Usuario"><br>
+
+	        <input placeholder="password" id="password" type="password" class="validate form-control" ><br>
+
+	        <input id="RePassword" type="password" class="validate form-control" placeholder="Repite tu Contraseña"><br>
+
+	        <input id="email" type="email" class="validate form-control" placeholder="Email"><br>
+
+	        <input type="submit" class="btn btn-primary" value="registrame!">
+		</form>
+	</div>
 </template>

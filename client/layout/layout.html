@@ -1,5 +1,5 @@
 <template name="layout">
-	<core-scaffold id="core_scaffold" layout center-justified>
+	<!--<core-scaffold id="core_scaffold" layout center-justified>
         <core-header-panel navigation="" flex="">
 	      <core-toolbar id="navheader" class="tall" style="background-image: url({{imagenPerfil}}); background-position: center;">
 	        <div class="middle avatar maroon" ></div>
@@ -26,5 +26,13 @@
             {{> yield}}
           {{/momentum}}
         </div>
-    </core-scaffold>
+    </core-scaffold>-->
+
+    {{>navbar}}
+
+    	<div class="container"> 
+          {{#momentum plugin='right-to-left' }}
+            {{> yield}}
+          {{/momentum}}
+        </div>
 </template>

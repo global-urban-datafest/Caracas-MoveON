@@ -1,0 +1,27 @@
+<template name="reportar">
+	<div class="container">
+		<input type="text" id="reporte" class="form-control floating-label" placeholder="¿Cual es el Reporte?">
+
+		  <select class="form-control categoria" placeholder="Selecciona la categoria">
+		    <option value="Choque">Choque</option>
+		    <option value="Arrollamiento">Arrollamiento</option>
+		    <option value="Alcabala">Alcabala</option>
+		    <option value="Obras en desarrollo">Obras en desarrollo</option>
+		    <option value="Vehiculo Detenido">Vehiculo Detenido</option>
+		    <option value="Suceso en desarrollo">Suceso en desarrollo</option>
+		    <option value="Obstaculo vial">Obstaculo vial</option>
+		    <option value="Otro">Otro</option>
+		  </select>
+
+		  <a href="#" id="capture" class="btn btn-primary">Tomar Foto</a>
+		{{#if fotoInstantaneaExist}}
+		  <div class="row">
+		  	<img src="{{fotoInstantanea}}" style="max-height: 640px; min-height: 320px; max-width: 480px; min-width: 240px;">
+		  </div>
+		{{else}}
+
+		{{/if}}
+
+		<button id="reportar" class="btn btn-primary">Reportar</button>
+    </div>
+</template>

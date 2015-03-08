@@ -1,0 +1,17 @@
+<template name="reportes"> 
+	<div class="container">
+		{{#each reportesDirect}}
+			<div class="well page active" id="button" style="display: block;">
+	            <h1 class="header">Se Reporto desde {{origenReporte}}</h1>
+				<div class="sample1">
+	                <h2>Se reporto lo siguiente: {{reporte}}</h2>
+
+	                <a href="#" class="btn btn-primary">Ver Foto</a>
+	            </div>  
+	        </div>
+	    {{/each}}
+	    <a href="{{pathFor 'reportar'}}" class="btn btn-primary">Reportar</a>
+	</div>
+	<!--
+	-->
+</template>
